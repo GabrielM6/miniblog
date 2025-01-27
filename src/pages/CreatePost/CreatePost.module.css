@@ -10,3 +10,12 @@
     color: #aaa;
     margin-bottom: 2em;
 }
+
+@media (max-width: 700px){
+    .create_post p{
+        color: #aaa;
+        margin: auto;
+        margin-bottom: 2em;
+        max-width: 90%;
+    }
+}

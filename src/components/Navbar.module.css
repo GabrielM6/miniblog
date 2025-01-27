@@ -1,32 +1,98 @@
-.navbar{
+.navbar {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em 2em;
+  position: relative;
+  right: 0;
+}
+
+.brand {
+  font-size: 1.2em;
+}
+
+.brand span {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.links_list {
+  display: flex;
+  list-style: none;
+  margin-right: 1em;
+}
+
+.links_list li a {
+  padding: .4em .6em;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 0.1rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+.menu span {
+  height: 0.35rem;
+  width: 100%;
+  background-color: black;
+}
+
+.open {
+  display: flex;
+}
+
+@media (max-width: 626px) {
+  .menu {
     display: flex;
-    box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
-    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .navbar {
+    flex-direction: column;
     align-items: center;
-    padding: .5em 2em;
-}
+    text-align: center;
+  }
 
-.brand{
-    font-size: 1.2em;
-}
+  .links_list {
+    display: none;
+    flex-direction: column;
+    width: 100%; /* Para ocupar a largura total */
+    margin-right: 2.4em;
+    padding-right: 0;
+    margin-bottom: 0.25rem;
+    text-align: center;
+    background-color: #ffffff; /* Define uma cor de fundo */
+    align-items: center;
+  }
 
-.brand span{
-    font-weight: 900;
-    text-transform: uppercase;
-}
+  .links_list li {
+    width: 100%; /* Cada item de lista ocupa 100% */
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding-left: 0;
+  }
 
-.links_list{
+  .links_list li a {
+    display: block; /* Faz com que o link ocupe toda a área do item */
+    padding: 1rem 0; /* Ajusta o padding para melhor experiência de toque */
+    width: 100%; /* Faz o link ocupar a largura completa */
+    text-align: center;
+  }
+
+  .links_list.open {
     display: flex;
-    list-style: none;
-    margin-right: 1em;
+  }
 }
-
-.links_list li a{
-    padding: .4em .6em;
-}
-
-.active{
-    background-color: black;
-    color: white;
-}
-

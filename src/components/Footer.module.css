@@ -6,3 +6,9 @@
     justify-content: center;
     background-color: #edf4f6;
 }
+@media (max-width: 410px){
+    .footer{
+        margin: auto;
+        max-width: 90%;
+    }
+}
