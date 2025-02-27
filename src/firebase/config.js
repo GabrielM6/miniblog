@@ -1,14 +1,20 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
 import {getFirestore} from 'firebase/firestore'
 
+const firebaseApiKey = process.env.REACT_APP_FIREBASE_API_KEY
+const firebaseAuthDomain = process.env.REACT_APP_FIREBASE_AUTH_DOMAIN
+const firebaseProjectId = process.env.REACT_APP_FIREBASE_PROJECT_ID
+const firebaseStorageBucket = process.env.REACT_APP_FIREBASE_STORAGE_BUCKET
+const firebaseMessaginSenderId=process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID
+const firebaseAppId = process.env.REACT_APP_FIREBASE_APP_ID
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDfhJ7vVy3FO__Z12nu5R8YcVsKHb76B0s",
-  authDomain: "miniblog-956e0.firebaseapp.com",
-  projectId: "miniblog-956e0",
-  storageBucket: "miniblog-956e0.appspot.com",
-  messagingSenderId: "697969107667",
-  appId: "1:697969107667:web:7d0d13d92a9dfadc5a6a26"
+  apiKey: `${firebaseApiKey}`,
+  authDomain: `${firebaseAuthDomain}`,
+  projectId: `${firebaseProjectId}`,
+  storageBucket: `${firebaseStorageBucket}`,
+  messagingSenderId: `${firebaseMessaginSenderId}`,
+  appId: `${firebaseAppId}`
 };
 
 const app = initializeApp(firebaseConfig);
